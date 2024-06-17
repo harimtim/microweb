@@ -21,8 +21,8 @@ def start_webserver():
         
     ip4=ap.ifconfig()[0]
 
-    print(f"Set up WLAN Access Point:\nSSID: {ssid}\nPassword: {password}")
-    print(f"IP: {ip4}")
+    print(f"\nSet up WLAN Access Point:\nSSID: {ssid}\nPassword: {password}")
+    print(f"\nIP: {ip4}")
 
     led.value(1)
 
