@@ -6,10 +6,12 @@ import machine
 
 def start_webserver():
     
+    ssid = "MicroWeb"
+    password = "microweb"
+    
     led = machine.Pin("LED", machine.Pin.OUT)
     ap = network.WLAN(network.AP_IF)
-    ap.config(ssid="MicroWeb", password="microweb")
-    ap.config(hostname="microweb")
+    ap.config(ssid=ssid, password=password)
     ap.active(True)
     led.value(0)
 
@@ -19,7 +21,7 @@ def start_webserver():
         
     ip4=ap.ifconfig()[0]
 
-    print("Connected!")
+    print(f"Set up WLAN Access Point:\nSSID: {ssid}\nPassword: {password}")
     print(f"IP: {ip4}")
 
     led.value(1)
