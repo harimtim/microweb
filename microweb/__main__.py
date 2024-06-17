@@ -1,1 +1,0 @@
-print("This is not a standalone tool please visit: https://github.com/harimtim/microweb to get more informations about usage and more!")
