@@ -25,8 +25,8 @@ def start_webserver():
 
     led.value(0)
     for i in range(1, 10+1):
-    led.toggle()
-    time.sleep(0.1)
+        led.toggle()
+        time.sleep(0.1)
     led.value(0)
 
     addr = socket.getaddrinfo("0.0.0.0", 80)[0][-1]
