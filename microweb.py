@@ -23,11 +23,21 @@ def start_webserver():
     print(f"\nSet up WLAN Access Point:\nSSID: {ssid}\nPassword: {password}")
     print(f"\nIP: {ip4}")
 
+    led.value(1)
+    time.sleep(0.2)
     led.value(0)
-    for i in range(1, 5+1):
-        led.value(1)
-        time.sleep(0.25)
-        led.value(0)
+    time.sleep(0.2)
+    led.value(1)
+    time.sleep(0.2)
+    led.value(0)
+    time.sleep(0.2)
+    led.value(1)
+    time.sleep(0.2)
+    led.value(0)
+    time.sleep(0.2)
+    led.value(1)
+    time.sleep(0.2)
+    led.value(0)
 
     addr = socket.getaddrinfo("0.0.0.0", 80)[0][-1]
     s = socket.socket()
