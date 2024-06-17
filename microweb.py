@@ -13,7 +13,6 @@ def start_webserver():
     ap = network.WLAN(network.AP_IF)
     ap.config(ssid=ssid, password=password)
     ap.active(True)
-    led.value(0)
 
     while not ap.isconnected():
         print("Not connected!")
@@ -24,7 +23,9 @@ def start_webserver():
     print(f"\nSet up WLAN Access Point:\nSSID: {ssid}\nPassword: {password}")
     print(f"\nIP: {ip4}")
 
-    led.value(1)
+    for i in range(1, 5+1):
+        led.toggle()
+        time.sleep(0.25)
 
     addr = socket.getaddrinfo("0.0.0.0", 80)[0][-1]
     s = socket.socket()
