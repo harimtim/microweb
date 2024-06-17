@@ -1,0 +1,33 @@
+[project]
+name = "microweb"
+description = "microweb is a PyPI module for MicroPython designed to easily set up a web server."
+requires-python = ">=3"
+license = {text = "MIT"}
+
+readme = "README.md"
+keywords = ["microweb", "phone", "tracking"]
+authors = [
+    { name = "harimtim" }
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["dependencies", "version"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = "requirements.txt"}
+version = {attr = "microweb.__version__"}
+
+[tool.setuptools]
+packages = ["microweb"] 
+
+[project.urls]
+GitHub = "https://github.com/harimtim/microweb"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
