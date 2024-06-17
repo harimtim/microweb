@@ -7,7 +7,7 @@ import machine
 def start_webserver():
     
     led = machine.Pin("LED", machine.Pin.OUT)
-    ap = network.ap(network.AP_IF)
+    ap = network.WLAN(network.AP_IF)
     ap.config(ssid="MicroWeb", password="microweb")
     ap.config(hostname="microweb")
     ap.active(True)
